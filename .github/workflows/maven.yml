@@ -31,7 +31,7 @@ jobs:
       run: mvn -B package --file pom.xml
 
   security:
-      needs: build
+      needs: test
       name: SA scan using snyk
       runs-on: ubuntu-latest
       steps:
